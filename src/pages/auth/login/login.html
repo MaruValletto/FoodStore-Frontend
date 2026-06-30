@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Store - Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../style.css">
+</head>
+<body class="auth-body">
+    <div class="auth-wrapper">
+        <div class="auth-card">
+            <div class="auth-logo">
+                <span class="brand-name login-brand-name">Food<span class="accent">Store</span></span>
+            </div>
+            <h2 class="auth-title">Iniciar Sesion</h2>
+            <p id="error-msg" class="auth-error" style="display:none;"></p>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="tu@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contrasena</label>
+                    <input type="password" id="password" placeholder="..." required>
+                </div>
+                <button type="submit" class="btn-primary btn-full">Ingresar</button>
+            </form>
+            <p class="auth-switch">No tenes cuenta? <a href="../registro/registro.html">Registrate</a></p>
+            <div class="auth-demo">
+                <small>Admin: admin@foodstore.com / 123456 </small><br>
+                <small>Usuario: juan@mail.com / pass123</small>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./login.ts"></script>
+</body>
+</html>

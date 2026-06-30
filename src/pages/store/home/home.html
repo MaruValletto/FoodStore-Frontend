@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Store - Catalogo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-area">
+                <img src="/img/logo1.png" alt="FoodStore" class="logo-img">
+                <span class="brand-name">Food<span class="accent">Store</span></span>
+            </div>
+            <div class="search-wrapper">
+                <input type="text" id="search-input" placeholder="Buscar productos...">
+            </div>
+            <div class="nav-links">
+                <a href="../../admin/adminHome/adminHome.html" id="user-name" class="nav-link">Usuario</a>
+                <a href="../cart/cart.html" class="nav-link"><img src="/img/shopping-cart.png" class="cart-icon" alt="Carrito"><span id="cart-badge" class="cart-badge">0</span></a>
+                <a href="../../client/orders/orders.html" class="nav-link">Mis Pedidos</a>
+                <button id="btn-logout" class="btn-logout">Salir</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-layout">
+        <aside class="sidebar">
+            <h2>Categorias</h2>
+            <div id="category-list" class="category-cards-container"></div>
+        </aside>
+        <main class="content-area">
+            <div class="sort-bar">
+                <span>Ordenar por:</span>
+                <select id="sort-select">
+                    <option value="default">Destacados</option>
+                    <option value="az">Nombre A-Z</option>
+                    <option value="za">Nombre Z-A</option>
+                    <option value="asc">Precio menor</option>
+                    <option value="desc">Precio mayor</option>
+                </select>
+            </div>
+            <section id="product-grid" class="product-grid"></section>
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 Food Store. Todos los derechos reservados.</p>
+    </footer>
+    <script type="module" src="./home.ts"></script>
+</body>
+</html>

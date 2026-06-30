@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Store - Productos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../style.css">
+</head>
+<body class="admin-body">
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <div class="sidebar-logo"><span class="brand-name">Food<span class="accent">Store</span></span></div>
+            <nav class="sidebar-nav">
+                <a href="../adminHome/adminHome.html" class="sidebar-link">Dashboard</a>
+                <a href="../categories/categories.html" class="sidebar-link">Categorias</a>
+                <a href="./products.html" class="sidebar-link active">Productos</a>
+                <a href="../orders/orders.html" class="sidebar-link">Pedidos</a>
+                <a href="../../store/home/home.html" class="sidebar-link">Ver Tienda</a>
+            </nav>
+            <button id="btn-logout" class="btn-logout sidebar-logout">Cerrar sesion</button>
+        </aside>
+        <main class="admin-main">
+            <div class="admin-page-header">
+                <h1>Gestion de Productos</h1>
+                <button id="btn-new-prod" class="btn-primary">+ Nuevo Producto</button>
+            </div>
+            <table class="admin-table">
+                <thead><tr><th>ID</th><th>Imagen</th><th>Nombre</th><th>Precio</th><th>Categoria</th><th>Stock</th><th>Estado</th><th>Acciones</th></tr></thead>
+                <tbody id="prod-table-body"></tbody>
+            </table>
+        </main>
+    </div>
+    <div id="prod-modal" class="modal-overlay" style="display:none;">
+        <div class="modal-card">
+            <h3 id="prod-modal-title">Nuevo Producto</h3>
+            <button id="close-prod-modal" class="modal-close">&times;</button>
+            <div class="form-group"><label>Nombre</label><input type="text" id="prod-nombre" required></div>
+            <div class="form-group"><label>Descripcion</label><textarea id="prod-desc"></textarea></div>
+            <div class="form-group"><label>Precio</label><input type="number" id="prod-precio" min="1" step="0.01"></div>
+            <div class="form-group"><label>Stock</label><input type="number" id="prod-stock" min="0"></div>
+            <div class="form-group"><label>Categoria</label><select id="prod-cat"></select></div>
+            <div class="form-group"><label>URL Imagen</label><input type="text" id="prod-imagen" placeholder="https://..."></div>
+            <div class="form-group check-group">
+                <label><input type="checkbox" id="prod-disponible" checked> Producto disponible</label>
+            </div>
+            <p id="prod-error" class="auth-error" style="display:none;"></p>
+            <button id="btn-save-prod" class="btn-primary btn-full">Guardar</button>
+        </div>
+    </div>
+    <script type="module" src="./products.ts"></script>
+</body>
+</html>

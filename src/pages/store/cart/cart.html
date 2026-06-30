@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Carrito - Food Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-area">
+                <span class="brand-name">Food<span class="accent">Store</span></span>
+            </div>
+            <div class="nav-links">
+                <a href="../home/home.html" class="nav-link">Catalogo</a>
+                <a href="#" class="nav-link active">Carrito <span id="cart-nav-count" class="cart-badge">0</span></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="cart-layout-container">
+        <h2>Mi Carrito</h2>
+        <div id="empty-cart-msg" class="empty-cart" style="display:none;">
+            <p>Tu carrito esta vacio. Agrega algo rico!</p>
+            <a href="../home/home.html" class="btn-primary">Volver al catalogo</a>
+        </div>
+        <section id="cart-content" class="cart-columns" style="display:none;">
+            <div class="cart-items-column" id="cart-items"></div>
+            <div class="cart-summary-column">
+                <div class="cart-summary-card">
+                    <h3>Resumen del pedido</h3>
+                    <div class="summary-row"><span>Subtotal</span><span id="cart-subtotal">$0</span></div>
+                    <div class="summary-row delivery"><span>Envio</span><span>Gratis</span></div>
+                    <hr class="summary-divider">
+                    <div class="summary-total"><span>Total a pagar</span><span id="cart-total-amount">$0</span></div>
+                    <button id="btn-checkout" class="btn-primary btn-full">Proceder al Pago</button>
+                    <button id="btn-clear-cart" class="btn-clear-cart">Vaciar Carrito</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal checkout -->
+        <div id="checkout-modal" class="modal-overlay" style="display:none;">
+            <div class="modal-card">
+                <h3>Completar Pedido</h3>
+                <button id="close-modal" class="modal-close">&times;</button>
+                <div class="form-group">
+                    <label>Telefono</label>
+                    <input type="text" id="checkout-tel" placeholder="+54 11...">
+                </div>
+                <div class="form-group">
+                    <label>Direccion de entrega</label>
+                    <input type="text" id="checkout-dir" placeholder="Calle, numero, piso...">
+                </div>
+                <div class="form-group">
+                    <label>Forma de pago</label>
+                    <select id="checkout-pago">
+                        <option value="">Seleccione...</option>
+                        <option value="TARJETA">Tarjeta</option>
+                        <option value="TRANSFERENCIA">Transferencia</option>
+                        <option value="EFECTIVO">Efectivo</option>
+                    </select>
+                </div>
+                <p id="checkout-error" class="auth-error" style="display:none;"></p>
+                <p class="summary-total">Total: <strong id="modal-total">$0</strong></p>
+                <button id="btn-confirm-order" class="btn-primary btn-full">Confirmar Pedido</button>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="./cart.ts"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Store - Panel Admin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../style.css">
+</head>
+<body class="admin-body">
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <div class="sidebar-logo"><span class="brand-name">Food<span class="accent">Store</span></span></div>
+            <nav class="sidebar-nav">
+                <span class="sidebar-label">Administracion</span>
+                <a href="./adminHome.html" class="sidebar-link active">Dashboard</a>
+                <a href="../categories/categories.html" class="sidebar-link">Categorias</a>
+                <a href="../products/products.html" class="sidebar-link">Productos</a>
+                <a href="../orders/orders.html" class="sidebar-link">Pedidos</a>
+                <a href="../../store/home/home.html" class="sidebar-link">Ver Tienda</a>
+            </nav>
+            <button id="btn-logout" class="btn-logout sidebar-logout">Cerrar sesion</button>
+        </aside>
+        <main class="admin-main">
+            <h1 class="admin-title">Panel de Administracion</h1>
+            <div class="stats-grid">
+                <div class="stat-card stat-orange"><h3 id="stat-categorias">0</h3><p>Categorias</p><a href="../categories/categories.html" class="btn-stat">Gestionar</a></div>
+                <div class="stat-card stat-blue"><h3 id="stat-productos">0</h3><p>Productos</p><a href="../products/products.html" class="btn-stat">Gestionar</a></div>
+                <div class="stat-card stat-red"><h3 id="stat-pedidos">0</h3><p>Pedidos</p><a href="../orders/orders.html" class="btn-stat">Gestionar</a></div>
+                <div class="stat-card stat-green"><h3 id="stat-disponibles">0</h3><p>Disponibles</p></div>
+            </div>
+            <div class="admin-summary">
+                <h2>Resumen rapido</h2>
+                <div id="summary-content"><p>Cargando estadisticas...</p></div>
+            </div>
+        </main>
+    </div>
+    <script type="module" src="./adminHome.ts"></script>
+</body>
+</html>

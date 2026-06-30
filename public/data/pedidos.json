@@ -1,0 +1,45 @@
+[
+  {
+    "id": "ORD-001",
+    "fecha": "2026-06-10T14:30:00",
+    "estado": "TERMINADO",
+    "total": 9300,
+    "formaPago": "TARJETA",
+    "idUsuario": 2,
+    "direccion": "Av. Corrientes 1234",
+    "telefono": "1111111111",
+    "detalles": [
+      { "idProducto": 1, "nombreProducto": "Pizza Muzzarella", "cantidad": 1, "subtotal": 4500 },
+      { "idProducto": 5, "nombreProducto": "Coca Cola 500ml", "cantidad": 1, "subtotal": 900 },
+      { "idProducto": 3, "nombreProducto": "Hamburguesa Clasica", "cantidad": 1, "subtotal": 3800 }
+    ]
+  },
+  {
+    "id": "ORD-002",
+    "fecha": "2026-06-15T19:00:00",
+    "estado": "PENDIENTE",
+    "total": 8200,
+    "formaPago": "EFECTIVO",
+    "idUsuario": 2,
+    "direccion": "San Martin 567",
+    "telefono": "1111111111",
+    "detalles": [
+      { "idProducto": 2, "nombreProducto": "Pizza Napolitana", "cantidad": 1, "subtotal": 5200 },
+      { "idProducto": 8, "nombreProducto": "Empanadas x6", "cantidad": 1, "subtotal": 2800 }
+    ]
+  },
+  {
+    "id": "ORD-003",
+    "fecha": "2026-06-18T12:00:00",
+    "estado": "CONFIRMADO",
+    "total": 5300,
+    "formaPago": "TRANSFERENCIA",
+    "idUsuario": 3,
+    "direccion": "Belgrano 890",
+    "telefono": "1122222222",
+    "detalles": [
+      { "idProducto": 4, "nombreProducto": "Hamburguesa BBQ", "cantidad": 1, "subtotal": 4200 },
+      { "idProducto": 6, "nombreProducto": "Jugo de Naranja", "cantidad": 1, "subtotal": 1100 }
+    ]
+  }
+]

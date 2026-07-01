@@ -185,6 +185,14 @@ El funcionamiento completo de la aplicación puede visualizarse en el siguiente 
 
 ---
 
+## Documentación
+
+Informe completo del proyecto:
+
+- Informe_Valletto_Marianela_TPI_Prog3..pdf
+
+---
+
 # 👩‍💻 Autora
 
 **Marianela Valletto**
